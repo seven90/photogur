@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show All</title>
+</head>
+<body>
+      
+
+      </html><% @photos.shuffle.each do |photo| %>
+      
+      <p>
+        <strong> Title: </strong>
+        <%= photo.title %>
+      </p>
+
+      <p>
+      <strong> Author: </strong>
+      <%= photo.author %>
+      </p>
+
+      <p>
+      <em> Url: </em>
+      <img src="<%= photo.url %>" alt="">
+      </p>
+      <% end %>
+
+</body>
