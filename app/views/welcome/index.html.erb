@@ -1,2 +1,28 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>photoGur</title>
+</head>
+<body>
+  <div class="row" >
+    <div class="small-9 large-9 columns">
+      <div class =  "row">
+        
+      
+          <% @photos.shuffle.each do |photo| %> 
+          <div style = "padding: 20px 20px 20px 20px;" class="small-3 large-3 column">
+            <img src= "<%= photo.url %>" />
+          </div>
+            <% end %>
+        
+      </div> 
+
+  </div>
+  <div style = "padding-top: 20px; " class = "small-3 large-3 columns">
+    <img src="http://placehold.it/200x1000" alt="">
+
+  </div> 
+  </div>
+</body>
+</html>

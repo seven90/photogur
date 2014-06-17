@@ -3,19 +3,22 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(params[:photo])
+    @photo = Photo.new(photo_params)
 
     @photo.save 
     redirect_to @photo
   end
 
   def show
-    @photo = Photo.find(params[:id])
+    @photos = Photo.all
   end
+
+  def index
+    @photos = Photo.all
+  end
+
   private
     def photo_params
       params.require(:photo).permit(:title, :author, :url)
     end
-
-
 end
