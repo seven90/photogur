@@ -1,0 +1,21 @@
+<%= form_for @photo do |p| %>
+ 
+  <p>
+    <%= p.label :title %><br>
+    <%= p.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= p.label :author %><br>
+    <%= p.text_field :author %>
+  </p>
+  
+  <p>
+  <%= p.label :url %><br>
+  <%= p.text_field :url %>
+  </p>
+ 
+  <p>
+    <%= p.submit %>
+  </p>
+<% end %>

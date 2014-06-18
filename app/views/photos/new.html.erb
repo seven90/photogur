@@ -1,23 +1,17 @@
-<%= form_for :photo, url: photos_path do |p| %>
-  <p> 
-    <%= p.label :title %> <br>
-    <%= p.text_field :title %>
-  </p>
-
-  <p>
-    <%= p.label :author %> <br>
-    <%= p.text_field :author %>
-  </p>
-
-  <p>
-    <%= p.label :url %> <br>
-    <%= p.url_field :url %>
-  </p>
-
-  <p>
-    <%= p.submit %>
-  </p>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Photo</title>
+</head>
+<body>
+  <h1> Add New Photo </h1>
+  <%= render 'form' %>
+  
+  <%= link_to 'Back', photos_path %>
+  
+</body>
+</html>
 
 
 

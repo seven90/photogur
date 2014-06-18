@@ -5,29 +5,9 @@
   <title>Edit</title>
 </head>
 <body>
- <div class = form>
-  <h1>Editing Photo</h1>
-  <%= form_for :photo, url: photo_path(@photo), method: :patch do |p| %>
-  <p> 
-    <%= p.label :title %> <br>
-    <%= p.text_field :title %>
-  </p>
-
-  <p>
-    <%= p.label :author %> <br>
-    <%= p.text_field :author %>
-  </p>
-
-  <p>
-    <%= p.label :url %> <br>
-    <%= p.url_field :url %>
-  </p>
-
-  <p>
-    <%= p.submit %>
-  </p>
-<% end %>
-<%= link_to 'Back', photos_path %>
+ <h1> Edit Photo </h1>
+ <%= render 'form' %>
+ <%= link_to 'Back', photo_path %>
 </div>
 </body>
 </html>

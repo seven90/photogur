@@ -6,23 +6,24 @@
 </head>
 <body>
       
-
-      </html><% @photos.shuffle.each do |photo| %>
       
       <p>
         <strong> Title: </strong>
-        <%= photo.title %>
+        <%= @photo.title %>
       </p>
 
       <p>
       <strong> Author: </strong>
-      <%= photo.author %>
+      <%= @photo.author %>
       </p>
 
       <p>
       <em> Url: </em>
-      <img src="<%= photo.url %>" alt="">
+      <img src="<%= @photo.url %>" alt="">
       </p>
-      <% end %>
+  
+      
+      <%= link_to 'Edit', edit_photo_path(@photo)%>
+
 
 </body>

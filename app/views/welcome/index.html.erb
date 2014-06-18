@@ -12,7 +12,7 @@
       
           <% @photos.shuffle.each do |photo| %> 
           <div style = "padding: 20px 20px 20px 20px;" class="small-3 large-3 column">
-            <img src= "<%= photo.url %>" />
+            <a href="photos/<%= photo.id%>"><img src= "<%= photo.url %>" /></a>
           </div>
             <% end %>
         

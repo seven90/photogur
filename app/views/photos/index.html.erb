@@ -18,7 +18,8 @@
       <td> <%= photo.url %> </td>
       <td> <%= link_to 'Show', photo_path(photo) %></td>
       <td> <%= link_to 'Edit', edit_photo_path(photo) %></td>
-    </tr>
+      <td><%= link_to 'Delete', photo_path(photo),
+                    method: :delete, data: { confirm: 'Are you sure?'} %></tr>
   <% end %>
   </table>
 </body>
